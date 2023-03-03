@@ -22,12 +22,12 @@ const infrastructure = [PersonRepositoryService];
         }
       },
       {
-        name: 'CUSTOMER_PACKAGE',
+        name: 'CUSTOMER_TRANSPORT',
         transport: Transport.GRPC,
         options: {
           package: 'customer',
           protoPath: join(__dirname, './proto/customer.proto'),
-          url:'localhost:3002',
+          url:'localhost:3003',
         }
       },
     ]),

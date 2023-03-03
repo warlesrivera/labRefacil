@@ -9,7 +9,7 @@ async function bootstrap() {
     options: {
       package: 'customer',
       protoPath: join(__dirname, './customer.proto'),
-      url:'localhost:3002'
+      url:'localhost:3003'
     }
   });
   await app.listen();

@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Customer } from './customers.pb';
 
 @Injectable()
 export class CustomerService {
-  async getAllCustomers(): Promise<Customer[]> {
-    const items: Customer[] = [
+  async getAllCustomers() {
+    const items = [
       {
         id: 1,
         name: 'string',
@@ -27,6 +26,11 @@ export class CustomerService {
         personPrincipal: 'string'
       }
     ];
-    return items;
+    console.log('aquiiii');
+    return {
+      page : 1,
+      limit: 3,
+      data: items
+    };
   }
 }

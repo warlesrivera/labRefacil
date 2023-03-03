@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 export interface CustomerProtoService {
-  GetCustomer(request: CustomerById): Observable<Customer>;
-  GetCustomers(request: ReqCustomers): Observable<Customers>;
+  getCustomer(request: CustomerById): Observable<Customer>;
+  getCustomers(request: ReqCustomers): Observable<Customers>;
   storeCustomers(request: ReqBodyCustomer): Observable<Customers>;
 }
 
