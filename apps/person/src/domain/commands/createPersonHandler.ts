@@ -35,7 +35,6 @@ export class CreatePersonHandler
     const resUser = await lastValueFrom(
       await this.clientPerson.send('get-user', command.userId),
     );
-    console.log(this.srv);
     const customer = await lastValueFrom(await this.srv.getCustomers({}));
     return { person: res, user: resUser, customer: customer };
   }

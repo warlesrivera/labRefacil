@@ -26,7 +26,6 @@ export class CustomerService {
         personPrincipal: 'string'
       }
     ];
-    console.log('aquiiii');
     return {
       page : 1,
       limit: 3,
