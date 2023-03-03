@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package customer;
+
+service CustomerProtoService {
+  rpc GetCustomer (CustomerById) returns (Customer) {}
+  rpc GetCustomers (ReqCustomers) returns (Customers) {}
+  rpc storeCustomers (ReqBodyCustomer) returns (Customers) {}
+}
+
+message ReqBodyCustomer {
+    string name = 2;
+    string address = 3;
+    string phone = 4;
+    string personPrincipal = 5;
+}
+message CustomerById {int32 id = 1;}
+
+message ReqCustomers {}
+
+message Customer {
+  int32 id = 1;
+  string name = 2;
+  string address = 3;
+  string phone = 4;
+  string personPrincipal = 5;
+}
+
+message Customers {
+    int32 page = 1;
+    int32 limit = 2;
+    repeated Customer data = 3;
+}
+
